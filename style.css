@@ -1,0 +1,166 @@
+/* Include the padding and border in an element's total width and height */
+* {
+    box-sizing: border-box;
+  }
+  h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    padding-bottom: 10px;
+  }
+  /* Remove margins and padding from the list */
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style the list items */
+  ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 85px 12px 40px;
+    background: #64B5F6;
+    font-size: 18px;
+    transition: 0.2s;
+    font-family: Arial, Helvetica, sans-serif;
+  
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Set all odd list items to a different color (zebra-stripes) */
+  ul li:nth-child(odd) {
+    background: #90CAF9;
+  }
+  
+  /* Darker background-color on hover */
+  ul li:hover {
+    background: #3498DB;
+  }
+  
+  /* When clicked on, add a background color and strike out text */
+  ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+  }
+  
+  /* Add a "checked" mark when clicked on */
+  ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+  }
+  
+  /* Style the close button */
+  .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+  }
+  
+  .close:hover, .btn:hover {
+    background-color: #1976D2;
+    color: white;
+  }
+  
+  /* Style the header */
+  .header {
+    background-color: #1976D2;
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+  }
+  
+  /* Clear floats after the header */
+  .header:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Style the input */
+  input {
+    margin: 0;
+    border: none;
+    border-radius: 20px;
+    width: 66%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+    outline: 0px;
+    border: 2px solid rgba(5, 21, 251, 0.911);
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  
+  /* Style the "Add" button */
+  .addBtn,.delAll {
+    padding: 10px;
+    width: 16%;
+    background: #90CAF9;
+    color:black;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 20px;
+    margin-left: 1%;
+    border: 2px solid rgba(5, 21, 251, 0.911);
+    font-family: Arial, Helvetica, sans-serif;
+    outline: 0px;
+    text-align: center;
+  }
+  .addBtn:active, .delAll:active{
+    font-size:14px ;
+    
+  }
+  .addBtn:hover, .delAll:hover {
+    background-color: #64B5F6;
+    color: white;
+  }
+
+  .btn{
+    position: absolute;
+    right: 40px;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+    
+  }
+
+  @media screen and (max-width: 400px){
+  
+        .addBtn,.delAll{
+          font-size: 12px;
+          
+          
+        }
+        .input{
+          font-size: 12px !important;
+          padding: 7px !important;
+        }
+        
+        
+        .addBtn:active, .delAll:active{
+          font-size:11px ;
+          
+        }
+        .header{
+          padding: 25px 5px;
+        }
+        ul li {
+          font-size: 14px;
+          padding: 12px 85px 12px 30px;
+        }
+  }
